@@ -3,7 +3,7 @@ from functools import reduce
 
 def sonar_sweep(input_filepath: str):
     with open(input_filepath) as input:
-        input_numbers = [int(line.rstrip()) for line in input.readlines()]
+        input_numbers = tuple(int(line.rstrip()) for line in input.readlines())
 
         return reduce(
             lambda acc, curr_val: acc + 1 if curr_val[1] > curr_val[0] else acc,
@@ -16,7 +16,7 @@ def sonar_sweep_windowed(input_filepath: str, window_size: int = 1):
     assert window_size >= 1, "Sliding window size must be at least 1"
 
     with open(input_filepath) as input:
-        input_numbers = [int(line.rstrip()) for line in input.readlines()]
+        input_numbers = tuple(int(line.rstrip()) for line in input.readlines())
         input_groups = [
             sum(window) / window_size
             for window in zip(

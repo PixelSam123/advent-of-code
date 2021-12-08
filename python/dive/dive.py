@@ -17,9 +17,9 @@ def dive(input_filepath: str):
 
         move_mapping = {"forward": add_dist_x, "down": add_depth, "up": subtract_depth}
 
-        for direction, distance in [
+        for direction, distance in (
             line.rstrip().split(" ") for line in input.readlines()
-        ]:
+        ):
             move_mapping[direction](int(distance))
 
         return dist_x * depth
