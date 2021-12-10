@@ -24,7 +24,7 @@ def binary_diagnostic(input_filepath: str):
 def main():
     from os.path import dirname
 
-    print(binary_diagnostic(f"{dirname(__file__)}/input.txt"))
+    print(binary_diagnostic(f"{dirname(__file__)}/../../input/binary_diagnostic.txt"))
 
 
 if __name__ == "__main__":

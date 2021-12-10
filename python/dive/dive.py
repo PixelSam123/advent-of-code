@@ -58,8 +58,8 @@ def dive_aimed(input_filepath: str):
 def main():
     from os.path import dirname
 
-    print(dive(f"{dirname(__file__)}/input.txt"))
-    print(dive_aimed(f"{dirname(__file__)}/input.txt"))
+    print(dive(f"{dirname(__file__)}/../../input/dive.txt"))
+    print(dive_aimed(f"{dirname(__file__)}/../../input/dive.txt"))
 
 
 if __name__ == "__main__":

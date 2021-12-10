@@ -34,8 +34,8 @@ def sonar_sweep_windowed(input_filepath: str, window_size: int = 1):
 def main():
     from os.path import dirname
 
-    print(sonar_sweep(f"{dirname(__file__)}/input.txt"))
-    print(sonar_sweep_windowed(f"{dirname(__file__)}/input.txt", 3))
+    print(sonar_sweep(f"{dirname(__file__)}/../../input/sonar_sweep.txt"))
+    print(sonar_sweep_windowed(f"{dirname(__file__)}/../../input/sonar_sweep.txt", 3))
 
 
 if __name__ == "__main__":
