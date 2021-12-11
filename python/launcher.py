@@ -56,8 +56,7 @@ def main():
 
         try:
             commands[input_command]()
-        except KeyError as e:
-            print(e.with_traceback())
+        except KeyError:
             print("Command not found. Type 'help' for a list of commands")
 
 
