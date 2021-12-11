@@ -31,11 +31,21 @@ def sonar_sweep_windowed(input_filepath: str, window_size: int = 1):
         )
 
 
-def main():
+def sonar_sweep_cli():
     from os.path import dirname
 
-    print(sonar_sweep(f"{dirname(__file__)}/../../input/sonar_sweep.txt"))
-    print(sonar_sweep_windowed(f"{dirname(__file__)}/../../input/sonar_sweep.txt", 3))
+    print(sonar_sweep(f"{dirname(__file__)}/../input/sonar_sweep.txt"))
+
+
+def sonar_sweep_windowed_cli():
+    from os.path import dirname
+
+    print(sonar_sweep_windowed(f"{dirname(__file__)}/../input/sonar_sweep.txt", 3))
+
+
+def main():
+    sonar_sweep_cli()
+    sonar_sweep_windowed_cli()
 
 
 if __name__ == "__main__":

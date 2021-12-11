@@ -1,7 +1,6 @@
-from binary_diagnostic import binary_diagnostic
-from dive import dive, dive_aimed
-from sonar_sweep import sonar_sweep, sonar_sweep_windowed
-from os.path import dirname
+from binary_diagnostic import binary_diagnostic_cli
+from dive import dive_aimed_cli, dive_cli
+from sonar_sweep import sonar_sweep_cli, sonar_sweep_windowed_cli
 
 
 def print_underlined(text: str, underline_char: str = "-"):
@@ -38,11 +37,11 @@ def main():
     print("Type 'help' for a list of commands. Exit with 'exit' or Ctrl+C")
 
     commands = {
-        "binarydiagnostic": binary_diagnostic,
-        "dive": dive,
-        "diveaimed": dive_aimed,
-        "sonarsweep": sonar_sweep,
-        "sonarsweepwindowed": sonar_sweep_windowed,
+        "binarydiagnostic": binary_diagnostic_cli,
+        "dive": dive_cli,
+        "diveaimed": dive_aimed_cli,
+        "sonarsweep": sonar_sweep_cli,
+        "sonarsweepwindowed": sonar_sweep_windowed_cli,
         "help": help_launcher,
         "exit": exit_launcher,
     }

@@ -55,11 +55,21 @@ def dive_aimed(input_filepath: str):
         return dist_x * depth
 
 
-def main():
+def dive_cli():
     from os.path import dirname
 
-    print(dive(f"{dirname(__file__)}/../../input/dive.txt"))
-    print(dive_aimed(f"{dirname(__file__)}/../../input/dive.txt"))
+    print(dive(f"{dirname(__file__)}/../input/dive.txt"))
+
+
+def dive_aimed_cli():
+    from os.path import dirname
+
+    print(dive_aimed(f"{dirname(__file__)}/../input/dive.txt"))
+
+
+def main():
+    dive_cli()
+    dive_aimed_cli()
 
 
 if __name__ == "__main__":

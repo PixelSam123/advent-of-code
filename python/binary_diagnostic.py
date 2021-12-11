@@ -21,10 +21,14 @@ def binary_diagnostic(input_filepath: str):
         return int("".join(gamma_rate_list), 2) * int("".join(epilson_rate_list), 2)
 
 
-def main():
+def binary_diagnostic_cli():
     from os.path import dirname
 
-    print(binary_diagnostic(f"{dirname(__file__)}/../../input/binary_diagnostic.txt"))
+    print(binary_diagnostic(f"{dirname(__file__)}/../input/binary_diagnostic.txt"))
+
+
+def main():
+    binary_diagnostic_cli()
 
 
 if __name__ == "__main__":
